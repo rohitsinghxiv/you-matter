@@ -1,0 +1,8 @@
+{
+  "name": "You Matter — Safe Emotional Sanctuary & Peer Support",
+  "description": "A dark, soothing sanctuary where people can pour out why they are feeling low, receive heartfelt community advice and cheering, track calming interactive steps to hold on, and listen to peaceful audio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
+
