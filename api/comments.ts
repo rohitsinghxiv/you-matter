@@ -33,7 +33,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const { data: journal } = await db
       .from('journals')
-      .select('id, title, current_struggle, reflection_body, is_public, is_hidden, profiles(pen_name)')
+      .select('id, title, current_struggle, reflection_body, is_public, is_hidden, profiles!user_id(pen_name)')
       .eq('id', journalId).single();
     if (!journal || !journal.is_public || journal.is_hidden) {
       return res.status(404).json({ success: false, error: 'This post is not available.' });
@@ -56,7 +56,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { data: row, error } = await db
       .from('comments')
       .insert({ journal_id: journalId, user_id: user.id, content, ai_moderation })
-      .select('id, journal_id, user_id, content, ai_moderation, created_at, profiles(pen_name, avatar_sticker, signature)')
+      .select('id, journal_id, user_id, content, ai_moderation, created_at, profiles!user_id(pen_name, avatar_sticker, signature)')
       .single();
     if (error || !row) throw error || new Error('insert failed');
 

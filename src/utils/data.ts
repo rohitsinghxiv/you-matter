@@ -75,9 +75,9 @@ export const DEFAULT_ACTION_STEPS: ActionStepItem[] = [
 
 const JOURNAL_SELECT = `
   *,
-  profiles(pen_name, avatar_sticker, signature),
+  profiles!user_id(pen_name, avatar_sticker, signature),
   reactions(user_id, emoji),
-  comments(id, journal_id, user_id, content, ai_moderation, created_at, profiles(pen_name, avatar_sticker, signature))
+  comments(id, journal_id, user_id, content, ai_moderation, created_at, profiles!user_id(pen_name, avatar_sticker, signature))
 `;
 
 function mapComment(c: any): CheerfulComment {
