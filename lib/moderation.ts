@@ -1,5 +1,5 @@
 import { Type } from '@google/genai';
-import { MODEL, clean, fence, getGeminiClient } from './gemini';
+import { MODEL, clean, fence, getGeminiClient } from './gemini.js';
 
 const TOXIC = [
   /\b(kill yourself|kys|go die|just die|you should die|nobody cares|no one cares)\b/i,

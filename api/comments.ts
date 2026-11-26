@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getAdmin, requireUser } from '../lib/supabaseAdmin';
-import { clean } from '../lib/gemini';
-import { moderateComment } from '../lib/moderation';
+import { getAdmin, requireUser } from '../lib/supabaseAdmin.js';
+import { clean } from '../lib/gemini.js';
+import { moderateComment } from '../lib/moderation.js';
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 

@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getAdmin, requireUser } from '../lib/supabaseAdmin';
+import { getAdmin, requireUser } from '../lib/supabaseAdmin.js';
 
 /** DELETE /api/account : permanently deletes the caller's account and all their data (cascade). */
 export default async function handler(req: VercelRequest, res: VercelResponse) {

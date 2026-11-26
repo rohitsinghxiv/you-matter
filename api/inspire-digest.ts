@@ -1,8 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Type } from '@google/genai';
-import { MODEL, clean, fence, getGeminiClient } from '../lib/gemini';
-import { requireUser } from '../lib/supabaseAdmin';
-import { rateLimited } from '../lib/rateLimit';
+import { MODEL, clean, fence, getGeminiClient } from '../lib/gemini.js';
+import { requireUser } from '../lib/supabaseAdmin.js';
+import { rateLimited } from '../lib/rateLimit.js';
 
 const FALLBACK = {
   quote: 'To live is the rarest thing in the world. Most people exist, that is all.',
