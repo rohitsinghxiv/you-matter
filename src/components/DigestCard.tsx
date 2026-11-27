@@ -110,6 +110,7 @@ export const DigestCard: React.FC<DigestCardProps> = ({
   };
 
   return (
+    <div data-nosnippet>
     <article id={`journal-${digest.id}`} className="entry-box mb-14 space-y-5">
       {/* Top Meta Line: Variation 6 .sidebar-label + Mood + Actions */}
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -504,5 +505,6 @@ export const DigestCard: React.FC<DigestCardProps> = ({
         </span>
       </button>
     </article>
+    </div>
   );
 };
